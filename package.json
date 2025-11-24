@@ -1,0 +1,21 @@
+{
+  "name": "hw4-express",
+  "version": "1.0.0",
+  "description": "HW4 Express - Computer Science Topics",
+  "main": "index.mjs",
+  "type": "module",
+  "scripts": {
+    "start": "node index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Um",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "inspirational-quotes": "^2.0.1",
+    "node-fetch": "^2.7.0"
+  }
+}

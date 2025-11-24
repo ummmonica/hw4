@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> - CS Topics</title>
+    
+    <!-- External CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    
+    <!-- Import font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Smooch+Sans:wght@100..900&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Computer Science Topics</h1>
+    </header>
+    
+    <hr>
+    
+    <!-- Navigation menu across all pages -->
+    <nav>
+        <a href="/" class="<%= title === 'Home' ? 'active' : '' %>">Home</a>
+        <a href="/first-programmer" class="<%= title === 'The First Programmer' ? 'active' : '' %>">The First Programmer</a>
+        <a href="/binary" class="<%= title === 'Why Binary?' ? 'active' : '' %>">Why Binary?</a>
+        <a href="/choosing-language" class="<%= title === 'Choosing a Programming Language' ? 'active' : '' %>">Choosing a Programming Language</a>
+        <a href="/practice" class="<%= title === 'Programming Practice' ? 'active' : '' %>">Programming Practice</a>
+    </nav>
+    
+    <br><br>
+    
+    <main>
