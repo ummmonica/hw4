@@ -35,25 +35,27 @@ app.get('/binary', (req, res) => {
 
 // route --> determined with API data
 app.get('/choosing-language', async (req, res) => {
-    try {
-        // Using GitHub API to get programming language data (Web API requirement)
-        const response = await fetch('https://api.github.com/repos/microsoft/vscode/languages');
-        const languages = await response.json();
+    // try {
+    //     // Using GitHub API to get programming language data (Web API requirement)
+    //     const response = await fetch('https://api.github.com/repos/microsoft/vscode/languages');
+    //     const languages = await response.json();
         
-        res.render('choosing_language', { 
-            title: 'Choosing a Programming Language',
-            apiData: languages,
-            apiName: 'GitHub API'
-        });
-    } catch (error) {
-        console.error('API Error:', error);
-        res.render('choosing_language', { 
-            title: 'Choosing a Programming Language',
-            apiData: null,
-            apiName: 'GitHub API',
-            error: 'Unable to fetch API data'
-        });
-    }
+    //     res.render('choosing_language', { 
+    //         title: 'Choosing a Programming Language',
+    //         apiData: languages,
+    //         apiName: 'GitHub API'
+    //     });
+    // } catch (error) {
+    //     console.error('API Error:', error);
+    //     res.render('choosing_language', { 
+    //         title: 'Choosing a Programming Language',
+    //         apiData: null,
+    //         apiName: 'GitHub API',
+    //         error: 'Unable to fetch API data'
+    //     });
+    // }
+    res.render('choosing_language', {
+        title: 'Choosing a Programming Language'});
 });
 
 // route --> programming practice
