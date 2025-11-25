@@ -5,24 +5,25 @@ import inspirationalQuotes from 'inspirational-quotes';
 const app = express();
 const PORT = 3000;
 
-// Set EJS as the view engine
+// Set ejs as the view engine
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
-// Serve static files
+// static files
 app.use(express.static('public'));
 
-// Route: Home page
+// app.get --> route
+// route --> home
 app.get('/', (req, res) => {
     res.render('home', { title: 'Home' });
 });
 
-// Route: First Programmer page
+// route --> first programmer
 app.get('/first-programmer', (req, res) => {
     res.render('first_programmer', { title: 'The First Programmer' });
 });
 
-// Route: Binary page with inspirational quote (Node Package)
+// route --> binary
 app.get('/binary', (req, res) => {
     // Using inspirational-quotes package (Node Package requirement)
     const quote = inspirationalQuotes.getRandomQuote();
@@ -32,7 +33,7 @@ app.get('/binary', (req, res) => {
     });
 });
 
-// Route: Choosing Language page with API data
+// route --> determined with API data
 app.get('/choosing-language', async (req, res) => {
     try {
         // Using GitHub API to get programming language data (Web API requirement)
@@ -55,7 +56,7 @@ app.get('/choosing-language', async (req, res) => {
     }
 });
 
-// Route: Programming Practice page
+// route --> programming practice
 app.get('/practice', (req, res) => {
     // Get another quote using the inspirational-quotes package
     const quote = inspirationalQuotes.getRandomQuote();

@@ -8,20 +8,36 @@
 
 <!-- Display API data from GitHub -->
 <% if (apiData && !error) { %>
-<div style="background-color: rgba(255, 255, 255, 0.5); padding: 20px; margin: 20px auto; max-width: 800px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-    <h3 style="margin-top: 0;">📊 Real-time Language Data from <%= apiName %></h3>
-    <p style="color: #666; font-size: 0.9em;">Here's data fetched from the <%= apiName %> showing programming languages used in VS Code repository:</p>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin-top: 15px;">
+<div style="background-color: rgba(255, 255, 255, 0.5); 
+            padding: 20px; 
+            margin: 20px auto; 
+            max-width: 800px; 
+            border-radius: 10px; 
+            box-shadow: 0 2px 10px 
+            rgba(0,0,0,0.1);">
+    <h3 style="margin-top: 0;">📊 Real-time Language Data from <%= api_name %></h3>
+    <p style="color: #666; font-size: 0.9em;">Here's data fetched from the <%= api_name %> showing programming languages used in VS Code repository:</p>
+    <div style="display: grid; 
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+                gap: 10px; margin-top: 15px;">
         <% Object.entries(apiData).slice(0, 8).forEach(([lang, bytes]) => { %>
-            <div style="background: white; padding: 10px; border-radius: 5px; text-align: center;">
+            <div style="background: white; 
+            padding: 10px; 
+            border-radius: 5px; 
+            text-align: center;">
                 <strong><%= lang %></strong><br>
-                <span style="font-size: 0.8em; color: #666;"><%= (bytes / 1024).toFixed(0) %> KB</span>
+                <span style="font-size: 0.8em; 
+                color: #666;"><%= (bytes / 1024).toFixed(0) %> KB</span>
             </div>
         <% }); %>
     </div>
 </div>
 <% } else if (error) { %>
-<div style="background-color: rgba(255, 200, 200, 0.5); padding: 20px; margin: 20px auto; max-width: 800px; border-radius: 10px;">
+<div style="background-color: rgba(255, 200, 200, 0.5); 
+            padding: 20px; 
+            margin: 20px auto; 
+            max-width: 800px; 
+            border-radius: 10px;">
     <p><strong>Note:</strong> <%= error %></p>
 </div>
 <% } %>
