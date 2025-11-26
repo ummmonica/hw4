@@ -45,14 +45,14 @@ app.get('/choosing_language', async (req, res) => {
         res.render('choosing_language', { 
             title: 'Choosing a Programming Language',
             apiData: languages,
-            apiName: 'GitHub API'
+            api_name: 'GitHub API'
         });
     } catch (error) {
         console.error('API Error:', error);
         res.render('choosing_language', { 
             title: 'Choosing a Programming Language',
             apiData: null,
-            apiName: 'GitHub API',
+            api_name: 'GitHub API',
             error: 'Unable to fetch API data'
         });
     }
