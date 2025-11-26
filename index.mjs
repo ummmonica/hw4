@@ -36,7 +36,7 @@ app.get('/binary', (req, res) => {
 });
 
 // route --> determined with API data
-app.get('/choosing_language', async (req, res) => {
+app.get('/choosing-language', async (req, res) => {
     try {
         // Using GitHub API to get programming language data (Web API requirement)
         const response = await fetch('https://api.github.com/repos/microsoft/vscode/languages');
