@@ -27,8 +27,8 @@ app.get('/first-programmer', (req, res) => {
 
 // route --> binary
 app.get('/binary', (req, res) => {
-    // Using inspirational-quotes package (Node Package requirement)
-    const quote = inspirationalQuotes.getRandomQuote();
+    // inspirational quote package, as required
+    const quote = inspirationalQuotes.getQuote();
     res.render('binary', { 
         title: 'Why Binary?',
         quote: quote
@@ -38,7 +38,7 @@ app.get('/binary', (req, res) => {
 // route --> determined with API data
 app.get('/choosing-language', async (req, res) => {
     try {
-        // Using GitHub API to get programming language data (Web API requirement)
+        // GitHUB data, as required
         const response = await fetch('https://api.github.com/repos/microsoft/vscode/languages');
         const languages = await response.json();
         
@@ -64,7 +64,7 @@ app.get('/choosing-language', async (req, res) => {
 // route --> programming practice
 app.get('/practice', (req, res) => {
     // Get another quote using the inspirational-quotes package
-    const quote = inspirationalQuotes.getRandomQuote();
+    const quote = inspirationalQuotes.getQuote();
     res.render('practice', { 
         title: 'Programming Practice',
         quote: quote
