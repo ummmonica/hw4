@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 });
 
 // route --> first programmer
-app.get('/first_programmer', (req, res) => {
+app.get('/first-programmer', (req, res) => {
     res.render('first_programmer', { title: 'The First Programmer' });
 });
 
