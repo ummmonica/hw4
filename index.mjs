@@ -27,11 +27,8 @@ app.get('/first-programmer', (req, res) => {
 
 // route --> binary
 app.get('/binary', (req, res) => {
-    // inspirational quote package, as required
-    const quote = inspirationalQuotes.getQuote();
     res.render('binary', { 
         title: 'Why Binary?',
-        quote: quote
     });
 });
 
